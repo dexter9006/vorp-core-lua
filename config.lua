@@ -18,18 +18,18 @@ Config = {
   initGroup                = "user", -- leave it like this
   Whitelist                = false,
   AllowWhitelistAutoUpdate = false,
-  maxHealth                = 4, -- 10 is FULL 0 IS EMPTY define max outer core for players
-  maxStamina               = 4, -- 10 is FULL 0 IS EMPTY define max outer core for players
+  maxHealth                = 5, -- 10 is FULL 0 IS EMPTY define max outer core for players
+  maxStamina               = 5, -- 10 is FULL 0 IS EMPTY define max outer core for players
   PVP                      = true, -- Can players attack/hurt one another
   PVPToggle                = true, -- If true, players can set their own pvp state
-  savePlayersTimer         = 10000, -- this will tell the core in how many miliseconds should all players be saved to the database, decreasing may reduce performance
+  savePlayersTimer         = 10*1000, -- this will tell the core in how many miliseconds should all players be saved to the database, decreasing may reduce performance
   showplayerIDwhenfocus    = true, -- set false will show steam name when focus on another player RMB
   disableAutoAIM           = true, -- if false players with controllers will have autoaim just like in rdr2
   ------------------------------------------------------------------------------
   --------------------------- MULTICHARACTER -----------------------------------
   SaveSteamNameDB          = false, -- TRUE if you want save steamname on character DB when player drop (need to update SQL)
   UseCharPermission        = false, --(do not use this right now) TRUE if you want give multicharacter on selected players (need to update SQL) | if you change TRUE to FALSE player logs with first character created
-  MaxCharacters            = 5, --MAX ALLOWED TO BE CREATED [if UseCharPermission = true, SELECTED players(with command) can create MaxCharacters characters / if UseCharPermission = false, players can create MaxCharacters characters]
+  MaxCharacters            = 2, --MAX ALLOWED TO BE CREATED [if UseCharPermission = true, SELECTED players(with command) can create MaxCharacters characters / if UseCharPermission = false, players can create MaxCharacters characters]
 
   ------------------------------------------------------------------------------
   ------------------------------ UI CORES --------------------------------------
@@ -72,22 +72,21 @@ Config = {
 
   ------------------------------------------------------------------------------
   ------------------------- SHOW OR HIDE UI's ----------------------------------
-
   HideUi            = true, --show or hide the UI includes  gold cash ID and level bar  the cash gold ID are now being displayed in the inventory. you can disable this one if yo u like it more
   mapTypeOnFoot     = 3, -- 0 = Off(no radar), 1 = Regular 2 = Expanded  3 = Simple(compass), for on foot
   mapTypeOnMount    = 3, -- 0 = Off(no radar), 1 = Regular 2 = Expanded  3 = Simple(compass), for on horse
   enableTypeRadar   = false, --- if true the above will work, if false players can choose their radar type in the game settings.
   Loadinscreen      = true, --ENABLE LOADING SCREENS on spawn and while spawn dead
-  LoadinScreenTimer = 10000, -- miliseconds
+  LoadinScreenTimer = 10*1000, -- miliseconds
+  
   -------------------------------------------------------------------------------
   ------------------------------- RESPAWN ---------------------------------------
-
-  HealthOnRespawn = 500, --Player's health when respawned in hospital (MAX = 500)
-  HealthOnResurrection = 100, --Player's health when resurrected (MAX = 500)
+  HealthOnRespawn = 250, --Player's health when respawned in hospital (MAX = 500)
+  HealthOnResurrection = 250, --Player's health when resurrected (MAX = 500)
   DisableRecharge = true, --Disable auto recharge of health outer core (real ped health)
-  RespawnTime = 10, --seconds
+  RespawnTime = 300, --seconds
   RespawnKey = 0xDFF812F9, --[E] KEY
-  RespawnKeyTime = 5000, -- Milliseconds it will take to press the button
+  RespawnKeyTime = 3*1000, -- Milliseconds it will take to press the button
   RespawnTitleFont = 1, -- for the draw text message
   RespawnSubTitleFont = 1, -- for the draw text message sub title font
   CombatLogDeath = true, -- people who combat log now spawn in dead rather than force spawned
@@ -105,7 +104,7 @@ Config = {
       h = 321.76
     },
     Saint = {
-      name = "Saint",
+      name = "Saint Denis",
       x = 2721.4562,
       y = -1446.0975,
       z = 46.2303,
@@ -126,15 +125,15 @@ Config = {
       h = 321.76
     },
     rhodes = {
-      name = "rhodes",
+      name = "Rhodes",
       x = 1229.0,
       y = -1306.1,
       z = 76.9,
       h = 321.76
     },
   },
+  
   -----------------------------------------------------------------------------
-
   ActiveEagleEye = true,
   ActiveDeadEye = false,
   TimeZoneDifference = 1, -- Your time zone difference with UTC in winter time
@@ -206,7 +205,5 @@ Config = {
     charhours          = "your character hours is: ~o~",
     playhours          = "hours played is: ~o~"
   },
-
-
 
 }
