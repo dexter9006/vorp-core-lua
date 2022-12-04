@@ -10,7 +10,7 @@ Config = {
   ----------------------------------------------------------------------------
   ----------------------- STARTING POINT -------------------------------------
   initGold                 = 0.0,
-  initMoney                = 200.0,
+  initMoney                = 300.0,
   initRol                  = 0.0,
   initXp                   = 0,
   initJob                  = "unemployed", -- leave it like this
@@ -18,8 +18,8 @@ Config = {
   initGroup                = "user", -- leave it like this
   Whitelist                = false,
   AllowWhitelistAutoUpdate = false,
-  maxHealth                = 5, -- 10 is FULL 0 IS EMPTY define max outer core for players
-  maxStamina               = 5, -- 10 is FULL 0 IS EMPTY define max outer core for players
+  maxHealth                = 4, -- 10 is FULL 0 IS EMPTY define max outer core for players
+  maxStamina               = 4, -- 10 is FULL 0 IS EMPTY define max outer core for players
   PVP                      = true, -- Can players attack/hurt one another
   PVPToggle                = true, -- If true, players can set their own pvp state
   savePlayersTimer         = 10*1000, -- this will tell the core in how many miliseconds should all players be saved to the database, decreasing may reduce performance
@@ -27,9 +27,9 @@ Config = {
   disableAutoAIM           = true, -- if false players with controllers will have autoaim just like in rdr2
   ------------------------------------------------------------------------------
   --------------------------- MULTICHARACTER -----------------------------------
-  SaveSteamNameDB          = false, -- TRUE if you want save steamname on character DB when player drop (need to update SQL)
+  SaveSteamNameDB          = true, -- TRUE if you want save steamname on character DB when player drop (need to update SQL)
   UseCharPermission        = false, --(do not use this right now) TRUE if you want give multicharacter on selected players (need to update SQL) | if you change TRUE to FALSE player logs with first character created
-  MaxCharacters            = 2, --MAX ALLOWED TO BE CREATED [if UseCharPermission = true, SELECTED players(with command) can create MaxCharacters characters / if UseCharPermission = false, players can create MaxCharacters characters]
+  MaxCharacters            = 1, --MAX ALLOWED TO BE CREATED [if UseCharPermission = true, SELECTED players(with command) can create MaxCharacters characters / if UseCharPermission = false, players can create MaxCharacters characters]
 
   ------------------------------------------------------------------------------
   ------------------------------ UI CORES --------------------------------------
@@ -72,15 +72,16 @@ Config = {
 
   ------------------------------------------------------------------------------
   ------------------------- SHOW OR HIDE UI's ----------------------------------
+
   HideUi            = true, --show or hide the UI includes  gold cash ID and level bar  the cash gold ID are now being displayed in the inventory. you can disable this one if yo u like it more
-  mapTypeOnFoot     = 3, -- 0 = Off(no radar), 1 = Regular 2 = Expanded  3 = Simple(compass), for on foot
-  mapTypeOnMount    = 3, -- 0 = Off(no radar), 1 = Regular 2 = Expanded  3 = Simple(compass), for on horse
-  enableTypeRadar   = false, --- if true the above will work, if false players can choose their radar type in the game settings.
+  mapTypeOnFoot     = 1, -- 0 = Off(no radar), 1 = Regular 2 = Expanded  3 = Simple(compass), for on foot
+  mapTypeOnMount    = 1, -- 0 = Off(no radar), 1 = Regular 2 = Expanded  3 = Simple(compass), for on horse
+  enableTypeRadar   = true, --- if true the above will work, if false players can choose their radar type in the game settings.
   Loadinscreen      = true, --ENABLE LOADING SCREENS on spawn and while spawn dead
   LoadinScreenTimer = 10*1000, -- miliseconds
-  
   -------------------------------------------------------------------------------
   ------------------------------- RESPAWN ---------------------------------------
+
   HealthOnRespawn = 250, --Player's health when respawned in hospital (MAX = 500)
   HealthOnResurrection = 250, --Player's health when resurrected (MAX = 500)
   DisableRecharge = true, --Disable auto recharge of health outer core (real ped health)
@@ -132,8 +133,8 @@ Config = {
       h = 321.76
     },
   },
-  
   -----------------------------------------------------------------------------
+
   ActiveEagleEye = true,
   ActiveDeadEye = false,
   TimeZoneDifference = 1, -- Your time zone difference with UTC in winter time
@@ -156,7 +157,7 @@ Config = {
   smalllogodesc = "Join us for a good time", -- text when hover over image
   discordlink = "https://discord.gg/", -- discord link
   richpresencebutton = "Join Discord", --set button text for Rich Presence Button
-  shownameandid = true, --show player steam name and id
+  shownameandid = false, --show player steam name and id
 
   ---------------------------------------------------------------------------------------
   ------------------------------- TRANSLATE ---------------------------------------------
@@ -205,5 +206,4 @@ Config = {
     charhours          = "your character hours is: ~o~",
     playhours          = "hours played is: ~o~"
   },
-
 }
