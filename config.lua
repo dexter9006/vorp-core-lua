@@ -135,7 +135,7 @@ Config = {
   },
   -----------------------------------------------------------------------------
 
-  ActiveEagleEye = true,
+  ActiveEagleEye = false,
   ActiveDeadEye = false,
   TimeZoneDifference = 1, -- Your time zone difference with UTC in winter time
 
@@ -177,18 +177,18 @@ Config = {
     TitleOnDead        = "Do /alertdoctor in chat to request doctors aid",
     SubTitleOnDead     = "You can respawn in %s seconds",
     RespawnIn          = "You can respawn in ",
-    SecondsMove        = " seconds",
+    SecondsMove        = " secondes",
     YouAreCarried      = "You are being carried by a person",
     VoiceRangeChanged  = "Voice chat range changed to %s meters",
     promptLabel        = "Respawn", -- prompt label.
-    prompt             = "Press", -- prompt group label
-    wayPoint           = "VORP: You need to set a waypoint first!",
-    mustBeSeated       = "VORP: You must be in the driver's seat!",
-    wagonInFront       = "VORP: You must be seated or near a wagon to delete it!",
-    cantCarry          = "VORP: Can't carry more weapons!",
-    Hold               = "HOLD ON!!",
-    Load               = "You are loading in",
-    Almost             = "Almost there...",
+    prompt             = "Appuyez sur", -- prompt group label
+    wayPoint           = "You need to set a waypoint first!",
+    mustBeSeated       = "You must be in the driver's seat!",
+    wagonInFront       = "You must be seated or near a wagon to delete it!",
+    cantCarry          = "Can't carry more weapons!",
+    Hold               = "Bienvenue",
+    Load               = "Vous allez vous réveiller dans quelques instants !",
+    Almost             = "Sur Red Island",
     Holddead           = "YOU ARE DEAD",
     Loaddead           = "you left the server while dead",
     forcedrespawn      = "YOU WILL BE RESPAWNED",
